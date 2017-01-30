@@ -1,0 +1,803 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the index page.
+// -----------------------------------------------------------------------------
+
+h1 {
+
+    color:$text-color;
+
+}
+
+body{
+  overflow:auto;
+}
+
+.content{
+    width:100%;
+}
+
+.pages{
+
+    width: 90%;
+    height:auto;
+   //background-color:red;
+    margin: 0 auto;
+    padding:10px;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+
+}
+
+.nav{
+    text-align:center;
+
+}
+
+.page_title{
+    text-align:center;
+    //margin:50px;
+}
+
+.tasbank_logo_img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+}
+
+.scale_icons{
+    width:30%;
+    height:auto;
+}
+
+#scale label {
+  position: absolute;
+  width: 20px;
+  margin-top: 20px;
+  margin-left: -10px;
+  text-align: center;
+}
+
+.scope_buttons{
+    margin:10px;
+}
+
+.td_headings {
+  vertical-align: center;
+  text-align: center;
+  padding:10px;
+  border: 1px solid black;
+}
+
+.cf_table{
+    width:100%;
+}
+
+.content{
+    vertical-align: center;
+  padding:10px;
+  border: 1px solid black;
+}
+
+.modalButtonContainer button{
+
+    width:100%;
+}
+
+.amountInputContainer{
+    min-width:110px;
+}
+
+.amountInputContainer input{
+    width:100%;
+}
+
+.sources_images{
+
+    width:190px;
+    height:auto;
+
+}
+
+.ACimage{
+    width:400px;
+}
+
+.page_5_content{
+    text-align:center;
+}
+
+.formulas{
+    width:100%;
+}
+
+.td_headings{
+    font-weight:bold;
+}
+
+.formula_container{
+    cursor: pointer; cursor: hand;
+}
+
+.option_container{
+    font-weight:bold;
+    text-align:center;
+    align:center;
+
+}
+
+.container-fluid{
+  text-align: center
+}
+
+.scope_button_group{
+    margin-top:10px;
+    width:100%;
+}
+
+.activity_buttons{
+  text-align: left;
+}
+
+
+
+.company_container{
+
+  width:50%;
+  height:300px;
+  float:left;
+  text-align:center;
+  padding:10px;
+
+
+}
+
+.company_content_container{
+
+  height:175px;
+  text-align:center;
+  padding-top:20px;
+  padding:30px;
+
+}
+
+.company_select_options{
+  width:80%;
+  //height:400px;
+ // text-align:center;
+    @include centerer(true,false);
+  text-align:center;
+
+
+
+ // margin:0 auto;
+}
+
+.company_select_buttons{
+  margin:0 auto;
+  margin:10px;
+}
+
+
+.progress_container{
+
+    //position: relative;
+
+   width:70%;
+   height:20px;
+   background-color:lightgrey;
+      margin:0 auto;
+
+   margin-top:20px;
+
+
+}
+
+.progress_bar{
+
+    // position: absolute;
+    // bottom: 0;
+    width:30%;
+    height:20px;
+    background-color:#00BD05;
+}
+.company_logo{
+
+   width:100%;
+   max-width:500px;
+ //  height:auto;
+ //  margin:20%;
+ // cursor: pointer; cursor: hand;
+
+}
+
+.cfEstimate {
+  width: 100%;
+  border-color: black;
+}
+
+.cfEstimate th, .cfEstimate td {
+  text-align: center;
+  border-color: black !important;
+  width: 50%;
+}
+
+.cfEstimate th {
+  background: black;
+  color: white;
+}
+
+select{
+
+width:100%;
+//min-width:50px !important;
+text-align:center;
+}
+
+.ecf_dropdown{
+min-width:70px;
+
+}
+
+.ef_dropdown{
+
+min-width:55px;
+
+}
+
+.formula_name_container{
+
+  font-weight:bold;
+
+}
+
+
+.active{
+  color:white !important;
+}
+
+
+.summary_container{
+  margin-bottom:40px;
+ // border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding-bottom:2px;
+}
+
+.statusContainer{
+  margin-top:20px;
+}
+
+.statusContainerTitle{
+  text-align:center;
+  font-size:12px;
+  padding:2px;
+  font-weight:bold;
+  background-color:darkgrey;
+  color:black;
+}
+
+.summary_zone_title{
+
+  background-color:lightgrey;
+  color:black;
+  font-weight:bold;
+    font-size:12px;
+
+
+}
+
+.zoneItem{
+
+  list-style: none;
+  margin-bottom:5px;
+
+}
+
+.statusContainer{
+
+  margin-top:5px !important;
+
+
+}
+
+
+.summary_activity_title{
+
+  text-align:center;
+  font-size:15px;
+  font-weight:bold;
+ // background-color:black;
+  border-bottom:2px solid black;
+  color:black;
+  padding-bottom:5px;
+
+}
+
+
+
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+path.slice{
+  stroke-width:2px;
+}
+
+polyline{
+  opacity: .3;
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.labelValue
+{
+  font-size: 60%;
+  opacity: .5;
+
+}
+
+.toolTip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.cfc_summary_bar{
+
+  width:100%;
+  height:50px;
+  background-color:lightgrey;
+
+
+}
+
+.source_bar{
+  float:left;
+}
+
+
+.quiz_container{
+    padding-bottom:20px;
+
+}
+.quiz_status{
+
+
+  opacity:0;
+  padding-bottom:5px;
+  width:100%;
+  margin-bottom:10px;
+
+}
+
+.attempts_feedback{
+  float:right;
+ // background-color:black;
+  //color:black;
+}
+
+.text-valid{
+  color: green !important;
+}
+
+.correct_quiz_status{
+
+    border-bottom:3px solid green;
+
+}
+
+.incorrect_quiz_status{
+
+    border-bottom:3px solid red;
+
+
+}
+
+.feedback_response_container{
+
+  //padding-top:2px;
+  margin-top:10px;
+}
+
+.incorrect_answer_container{
+
+  border-left: 5px solid red;
+  padding-left:5px;
+
+}
+
+.correct_answer_container{
+
+  border-left: 5px solid $green-valid;
+  padding-left:5px;
+
+}
+
+.normal{
+
+  font-weight: normal !important;
+
+}
+
+.correct_border{
+  border-color:green !important;
+}
+
+.incorrect_border{
+  border-color:red !important;
+}
+
+.modal-body-content{
+
+  overflow-y:scroll;
+  max-height:1000px;
+
+}
+
+.invoice{
+
+  text-align:center;
+
+}
+
+.invoice img{
+
+  margin-right:10px;
+
+}
+
+.info_table{
+  width:100%;
+ // background-color:red;
+ margin-bottom:10px;
+}
+
+.info_table td{
+
+    border:1px solid darkgrey;
+    padding:2px;
+    text-align:center;
+}
+.s0{
+  font-weight:bold;
+  text-align:center;
+  background-color:black;
+  color:white;
+  padding:3px;
+}
+.s1, .s13, .s14{
+
+  text-align:center;
+  background-color:lightgrey;
+  color:black;
+  padding:3px;
+}
+
+.company_select_text{
+
+  text-align:center;
+
+}
+
+.correct_answer_feedback{
+
+  color:green;
+  font-weight:bold;
+
+}
+
+.points_available_container{
+  width:100%;
+  text-align:center;
+  background-color:lightblue;
+  padding:2px;
+  padding-left:0px;
+  margin-bottom:5px;
+  margin-top:25px;
+
+
+
+}
+
+div.buttondiv1 {
+  display: inline-block;
+  width: 60%;
+  //vertical-align: middle;
+}
+
+
+div.buttondiv2 {
+  width: 40%;
+  display: inline-block;
+}
+
+span.attempts_feedback {
+  color: #666;
+  padding-top: 8px;
+  padding-left: 6px;
+  font-size: 0.9em;
+  float: left;
+}
+
+button.submit_button, button.reset_button, button.feedback_button {
+  margin-right: 4px;
+  float: left;
+
+}
+
+button.next_button, button.prev_button {
+  float: right;
+  margin-left: 4px;
+}
+
+div.start_button_div {
+  margin-top: 30px;
+  text-align: center;
+}
+.start_button{
+  padding-left:30px  !important;
+  padding-right:30px  !important;
+}
+
+div.panel-body {
+  //vertical-align: middle;
+  display: table;
+  //padding: 5px;
+  //text-align: center;
+
+}
+div.more_info_img {
+  display: table-cell;
+  padding-right: 5px;
+  //display: inline-block;
+  width: 35%;
+}
+
+div.more_info_text {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 5px;
+  //display: inline-block;
+  //width: 50%;
+  //text-align: center;
+  //vertical-align: middle;
+}
+.vertical_center_text {
+  //vertical-align: middle;
+}
+
+.more_info_table{
+  margin-bottom:0px !important;
+  border:1px solid darkgrey !important;
+  width:100% !important;
+}
+
+.more_info_table th, .more_info_table td {
+  vertical-align: middle !important;
+  text-align: center;
+  border:1px solid darkgrey !important;
+  padding:2px !important;
+
+}
+
+.more_info_table th {
+  background-color: lightgrey;
+}
+
+
+
+
+.panel-group{
+      margin-top:5px;
+
+}
+.panel-heading{
+
+  padding:5px !important;
+
+}
+
+.panel-title{
+
+  font-size: 14px !important;
+
+}
+
+
+.more_info_toggle{
+
+    cursor: pointer; cursor: hand;
+
+}
+
+.more_info_img{
+
+    width:25% !important;
+  img{
+    width: 100% !important;
+    height: auto;
+  }
+
+}
+
+.more_info_container{
+  margin-top:15px;
+  margin-bottom:20px;
+
+}
+
+.scoreSummaryTable {
+
+  width:100%;
+
+  td, th{
+      text-align:center;
+      padding:5px;
+
+  border:1px solid grey;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 12px;
+  padding: 8px;
+  margin-top: -20px;
+  font: 10px sans-serif;
+  background: #ddd;
+  pointer-events: none;
+}
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* styles for macc project */
+
+.expanded.expander {
+    padding-left: 13px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/expanded.gif);
+}
+
+.collapsed.expander {
+    padding-left: 13px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/collapsed.gif);
+}
+
+.field_help{
+  padding-left: 13px;
+  display: inline;
+}
+
+.helpcontainer{
+  /*background-color: #D0E2F5;*/
+}
+
+div.macc-panel-body {
+  display: block;
+  padding: 15px;
+}
+
+/* MACCSelector Styles */
+.axis text {
+font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+fill: none;
+stroke: #000;
+shape-rendering: crispEdges;
+}
+
+.bartext {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px black;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;}
+
+
+/* End MACC Selector Styles */
+
+/* Carbon Market Graph Styles */
+
+.chart{
+  width:100%;
+  height:400px;
+}
+
+.incorrectchart{
+  width:100%;
+  height:400px;
+}
+
+
+.q1chart{
+  width:100%;
+  height:400px;
+}
+
+.q2chart{
+  width:100%;
+  height:400px;
+}
+
+
+.line {
+fill: none;
+}
+
+.validation_error{
+  border: 1px solid red !important;
+}
+/* End Carbon Market Styles */
