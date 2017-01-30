@@ -1055,7 +1055,12 @@
     error_log($pointsToLeaderboard." > ".$pointsForEdx." > ".$totalPointsPossible);
 
     upload_leaderboard($lti->context_id(), $lti->user_id(), "footprint", $pointsToLeaderboard);
-    send_grade(round(($pointsForEdx/$totalPointsPossible), 2), $lti);
+    if ($totalPointsPossible!=0){
+      send_grade(round(($pointsForEdx/$totalPointsPossible), 2), $lti);
+    }
+    else {
+      send_grade(0, $lti);
+    }
 
     echo json_encode($stateJSON);
 
