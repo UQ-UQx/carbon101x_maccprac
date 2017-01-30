@@ -560,7 +560,7 @@
                   <div class="row">
                     <div class="col-12">
                       <p>
-                      <strong>Project description:</strong> Replacing rotors, blades and seals in pressure cylinders can reduce flow losses and inter-stage leakage in the electricity generation process. Improving the efficiency decreases coal consumption and associated greenhouse gas emissions.
+                      <strong>Project description:</strong> Changing incandescent lamps to more energy efficient low-watt compact fluorescent lamps (CFLs) reduces electricity demand and associated emissions.
                       </p>
 
                     </div>
@@ -571,8 +571,8 @@
                         'id'=>'enerco_proj1',
                         'name'=>'Swanson Project 1',
                         'content'=>array(
-                            'projectname'=>"Steam turbine retrofit",
-                            'projects'=>"Steam turbine retrofit,Electricity network upgrade,Lighting retrofit,Truck driver training program",
+                            'projectname'=>"Lighting retrofit",
+                            'projects'=>"Lighting retrofit,HVAC upgrade,Biofuel switch,Solar PV system",
                             'projectids'=>"enerco_proj1,enerco_proj2,enerco_proj3,enerco_proj4",
                             'enable_electricity_saving'=>false,
                             'enable_diesal_saving'=>false,
@@ -598,7 +598,15 @@
                         'leaderboard'=>true
                     )				
 			
-			),		
+			),
+			
+			
+			
+			
+			
+			
+			
+					
 		),		
 	);
 

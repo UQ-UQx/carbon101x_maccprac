@@ -987,6 +987,8 @@
         error_log(json_encode($completeFeedback),0);
         */
         $points = $score;
+        
+       
 
         if ($totalPoints!=0)
         {
@@ -1057,9 +1059,13 @@
     };
     error_log($pointsToLeaderboard." > ".$pointsForEdx." > ".$totalPointsPossible);
 
-    upload_leaderboard($lti->context_id(), $lti->user_id(), "footprint", $pointsToLeaderboard);
-    send_grade(round(($pointsForEdx/$totalPointsPossible), 2), $lti);
-
+    upload_leaderboard($lti->context_id(), $lti->user_id(), "macc_prac", $pointsToLeaderboard);
+    if ($totalPointsPossible!=0){
+	    send_grade(round(($pointsForEdx/$totalPointsPossible), 2), $lti);
+    }
+    else {
+	    send_grade(0, $lti);	    
+    }
     echo json_encode($stateJSON);
 
 ?>
