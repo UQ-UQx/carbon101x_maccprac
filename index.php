@@ -6,6 +6,7 @@
    // include('Pages/Content/modals.php');
     require_once('Pages/Content/tasbank.php');
     require_once('Pages/Content/enerco.php');
+    require_once('Pages/Content/swanson.php');
 
 
     // Assign default values for all possible LTI Variables
@@ -57,7 +58,8 @@
 
     $companies = array(
         array('id'=>'tasbank', 'data'=>$tasbank["pages"], 'logo'=>$tasbank["logo"], 'companyprofile'=>$tasbank["companyprofile"], 'progress'=>0),
-        array('id'=>'enerco', 'data'=>$enerco["pages"], 'logo'=>$enerco["logo"], 'companyprofile'=>$enerco["companyprofile"],  'progress'=>0)
+        array('id'=>'enerco', 'data'=>$enerco["pages"], 'logo'=>$enerco["logo"], 'companyprofile'=>$enerco["companyprofile"],  'progress'=>0),
+        array('id'=>'swanson', 'data'=>$swanson["pages"], 'logo'=>$swanson["logo"], 'companyprofile'=>$swanson["companyprofile"],  'progress'=>0)
     );
 
 
