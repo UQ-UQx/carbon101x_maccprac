@@ -36,20 +36,23 @@
 
     require_once('../Pages/Content/tasbank.php');
     require_once('../Pages/Content/enerco.php');
+    require_once('../Pages/Content/swanson.php');
 
 
 
     $answers = array(
 
         "tasbank"=>$tasbank["answers"],
-        "enerco"=>$enerco["answers"]
+        "enerco"=>$enerco["answers"],
+        "swanson"=>$swanson["answers"],
 
     );
 
     $activities = array(
 
         "tasbank"=>getActivites($tasbank),
-        "enerco"=>getActivites($enerco)
+        "enerco"=>getActivites($enerco),
+        "swanson"=>getActivites($swanson)
 
     );
 

@@ -8,6 +8,9 @@ var state = {
     },
     "enerco":{
       "created":_.now()
+    },
+    "swanson": {
+      "created":_.now()
     }
 };
 var selectedCompany = "";
