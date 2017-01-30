@@ -600,12 +600,386 @@
 			
 			),
 			
+'page_3'=>array(
+
+                'page_title'=>'Project 2',
+                'page_content'=>'
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6"><img src="assets/swanson_project_assets/air-conditioner-1185041_1920.jpg" width="350" height="260"></div>
+                    <div class="col-sm-6">
+                      <table class="table table-bordered table-responsive">
+                        <thead>
+                          <tr>
+                            <th colspan="2">HVAC upgrade</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Project lifetime </td>
+                            <td>7 years</td>
+                          </tr>
+                          <tr>
+                            <td>Upfront Capital Cost (CAPEX)</td>
+                            <td>$100,000 </td>
+                          </tr>
+                          <tr>
+                            <td>Expected Annual Savings</td>
+                            <td>$10,000</td>
+                          </tr>
+                          <tr>
+                            <td>Expected Annual Operation Cost (OPEX)</td>
+                            <td>$1,000</td>
+                          </tr>
+                          <tr>
+                            <td>Annual Emissions Reductions (tCO<sub>2</sub>e)</td>
+                            <td>40</td>
+                          </tr>
+                          <tr>
+                            <td>Interest rate</td>
+                            <td>8% p.a.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <p>
+                      <strong>Project description:</strong> Upgrading the Heating Ventilation and Air Conditioning (HVAC) system in an office building can result in higher performance and therefore lower power use and emissions.
+                      </p>
+                    </div>
+                  </div>
+                </div>',
+                'activity'=>array(
+                        'type'=>'maccproject',
+                        'name'=>'Swanson Project 2',
+                        'id'=>'enerco_proj2',
+                        'content'=>array(
+                            'projectname'=>"HVAC upgrade",
+                            'projects'=>"Lighting retrofit,HVAC upgrade,Biofuel switch,Solar PV system",
+                            'projectids'=>"enerco_proj1,enerco_proj2,enerco_proj3,enerco_proj4",
+                            'enable_electricity_saving'=>false,
+                            'enable_diesal_saving'=>false,
+                            'buttons'=>array(
+                                'submit'=>true,
+                                'save'=>true,
+                                'reset'=>true,
+                                'feedback'=>false,
+                                'prev'=>true,
+                                'next'=>true,
+                            )
+                        ),
+                        'score'=>1,
+                        'points'=>550,
+                        'npv_score'=>350,
+                        'cost_score'=>200,
+                        'submit'=>array(
+                            "page_4"
+                        ),
+                        'prev' => 'page_2',
+                        'next' => 'page_4',
+                        'attempts'=>3,
+                        'leaderboard'=>true
+                    )
+            ),			
+			
+'page_4'=>array(
+
+                'page_title'=>'Project 3',
+                'page_content'=>'
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6"><img src="assets/swanson_project_assets/snow-plowing-1963017_1920.jpg" width="350" height="260"></div>
+                    <div class="col-sm-6">
+                      <table class="table table-bordered table-responsive">
+                        <thead>
+                          <tr>
+                            <th colspan="2">Biofuel switch</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Project lifetime </td>
+                            <td>6 years</td>
+                          </tr>
+                          <tr>
+                            <td>Upfront Capital Cost (CAPEX)</td>
+                            <td>$9,000</td>
+                          </tr>
+                          <tr>
+                            <td>Annual Savings</td>
+                            <td>$4,000</td>
+                          </tr>
+                          <tr>
+                            <td>Avoided diesel (L)</td>
+                            <td>80,000</td>
+                          </tr>
+                          <tr>
+                            <td>Annual Operation Cost (OPEX)</td>
+                            <td>$500</td>
+                          </tr>
+                          <tr>
+                            <td>Annual Emissions Reduction (tCO<sub>2</sub>e)</td>
+                            <td><a href="javascript:void(0)" data-toggle="tooltip" title="Avoided annual emissions (tCO2e) = (Expected kWh savings * emissions factor) / 1000">???</a></td>
+                          </tr>
+                          <tr>
+                            <td>Diesel emissions factor (kgCO2e/L)</td>
+                            <td>2.7</td>
+                          </tr>
+                          <tr>
+                            <td>Interest rate</td>
+                            <td>8% p.a.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <p>
+                      <strong>Project description:</strong> Biodiesel is made from renewable biomass, and has a much lower emissions intensity than conventional diesel.
+                      </p>
+
+                    </div>
+                  </div>
+                </div>',
+                'activity'=>array(
+                        'type'=>'maccproject',
+                        'id'=>'enerco_proj3',
+                        'name'=>'Swanson Project 3',
+                        'content'=>array(
+                            'projectname'=>"Biofuel switch",
+                            'projects'=>"Lighting retrofit,HVAC upgrade,Biofuel switch,Solar PV system",
+                            'projectids'=>"enerco_proj1,enerco_proj2,enerco_proj3,enerco_proj4",
+                            'enable_electricity_saving'=>true,
+                            'enable_diesal_saving'=>false,
+                            'buttons'=>array(
+                                'submit'=>true,
+                                'save'=>true,
+                                'reset'=>true,
+                                'feedback'=>false,
+                                'prev'=>true,
+                                'next'=>true,
+                            )
+                        ),
+                        'score'=>1,
+                        'points'=>600,
+                        'npv_score'=>350,
+                        'cost_score'=>250,
+                        'submit'=>array(
+                            "page_5"
+                        ),
+                        'prev' => 'page_3',
+                        'next' => 'page_5',
+                        'attempts'=>3,
+                        'leaderboard'=>true
+                    )
+            ),			
 			
 			
-			
-			
-			
-			
+'page_5'=>array(
+
+                'page_title'=>'Project 4',
+                'page_content'=>'
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6"><img src="assets/swanson_project_assets/alternative-21761_1920.jpg" width="350" height="260"></div>
+                    <div class="col-sm-6">
+                      <table class="table table-bordered table-responsive">
+                        <thead>
+                          <tr>
+                            <th colspan="2">Solar PV system</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Project lifetime </td>
+                            <td>7 years</td>
+                          </tr>
+                          <tr>
+                            <td>Upfront Capital Cost (CAPEX)</td>
+                            <td>$1,000,000</td>
+                          </tr>
+                          <tr>
+                            <td>Annual Savings</td>
+                            <td>$150,000</td>
+                          </tr>
+                          <tr>
+                            <td>kWh savings</td>
+                            <td>900,000</td>
+                          </tr>
+                          <tr>
+                            <td>Annual Operation Cost (OPEX)</td>
+                            <td>$10,000</td>
+                          </tr>
+                          <tr>
+                          	<td>Avoided Annual Emissions (tCO2e)</td>
+                            <td><a href="javascript:void(0)" data-toggle="tooltip" title="Avoided annual emissions (tCO<sub>2</sub>e) = (Annual Diesel Savings (L) * emissions factor) / 1000">???</a></td>
+                          </tr>
+                          <tr>
+                            <td>Scope 2 electricity emissions factor (kgCO2e/kWh)</td>
+                            <td>0.58</td>
+                          </tr>
+                          <tr>
+                            <td>Interest rate</td>
+                            <td>8% p.a.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <p>
+                      <strong>Project description:</strong>  Installing a roof-top solar PV system can generate power which is used to replace (avoid) power purchase from the grid and associated emissions.
+                      </p>
+
+                    </div>
+                  </div>
+                </div>',
+                'activity'=>array(
+                        'type'=>'maccproject',
+                        'id'=>'enerco_proj4',
+                        'name'=>'Swanson Project 4',
+                        'content'=>array(
+                            'projectname'=>"Solar PV system",
+                            'projects'=>"Lighting retrofit,HVAC upgrade,Biofuel switch,Solar PV system",
+                            'projectids'=>"enerco_proj1,enerco_proj2,enerco_proj3,enerco_proj4",
+                            'enable_electricity_saving'=>false,
+                            'enable_diesal_saving'=>true,
+                            'buttons'=>array(
+                                'submit'=>true,
+                                'save'=>true,
+                                'reset'=>true,
+                                'feedback'=>false,
+                                'prev'=>true,
+                                'next'=>true,
+                            )
+                        ),
+                        'score'=>1,
+                        'points'=>650,
+                        'npv_score'=>400,
+                        'cost_score'=>250,
+                        'submit'=>array(
+                            "page_6", "page_7"
+                        ),
+                        'prev' => 'page_4',
+                        'next' => 'page_6',
+                        'attempts'=>3,
+                        'leaderboard'=>true
+                    )
+
+            ),
+'page_6'=>array(
+
+                'page_title'=>'MACC<br/>Graph',
+                'page_content'=>'
+
+                ',
+                'activity'=>array(
+                                        'type'=>'maccanalysis',
+                                        'id'=>'macc_analysis1',
+                                        'content'=>array(
+                                            'projects'=>"Steam turbine retrofit,Electricity network upgrade,Lighting retrofit,Truck driver training program",
+                                            'projectids'=>"enerco_proj1,enerco_proj2,enerco_proj3,enerco_proj4",
+                                            'buttons'=>array(
+                                                'submit'=>false,
+                                                'save'=>false,
+                                                'reset'=>false,
+                                                'feedback'=>true,
+                                                'prev'=>true,
+                                                'next'=>true,
+                                            )
+                                        ),
+                                        'score'=>0,
+                                        'points'=>0,
+                                        'npv_score'=>0,
+                                        'cost_score'=>0,
+                                        'submit'=>array(
+                                        ),
+                                        'prev' => 'page_5',
+                                        'next' => 'page_7',
+                                        'attempts'=>3,
+                                        'leaderboard'=>true
+                                  )
+            ),'page_7'=>array(
+
+                'page_title'=>'MACC<br/>Interpretation',
+                'page_content'=>''
+                ,
+                'activity'=>
+                            array(
+                                      'type'=>'maccinterpretation',
+                                      'name'=>'MACC Interpretation',
+                                      'id'=>'macc_summary1',
+                                      'content'=>array(
+                                        'question1'=>'
+                                         Which project is the best value in terms of marginal abatement cost?
+                                        ',
+                                        'question2'=>'
+                                         If a carbon price of $26/tCO<sub>2</sub>e was introduced, which projects would you implement to minimise your cost of compliance? (Tick all that apply.)
+                                        ',
+                                        'showmacc'=>true,
+                                        'showcarbonpriceonmacc'=>false,
+                                        'carbonprice'=>'26',
+                                        'options'=>array(
+                                            'Steam turbine retrofit',
+                                            'Electricity network upgrade',
+                                            'Lighting retrofit',
+                                            'Truck driver training program'
+                                        ),
+                                          'buttons'=>array(
+
+                                              'submit'=>true,
+                                              'save'=>true,
+                                              'reset'=>true,
+                                              'feedback'=>true,
+                                              'prev'=>true,
+                                              'next'=>true,
+
+                                          )
+
+                                      ),
+                                      'score'=>1,
+                                      'points'=>200,
+                                      'submit'=>array(
+                                          "page_8"
+                                      ),
+                                      'prev' => 'page_6',
+                                      'next' => 'page_8',
+                                      'attempts'=>3,
+                                      'leaderboard'=>true
+                                  )
+            ),            
+'page_8'=>array(
+
+              'page_id'=>'summary',
+              'page_title'=>'Summary',
+              'page_content'=>'',
+              'summary'=>array(
+
+                  "enerco_proj2"=>array(
+
+
+                  ),
+                  "enerco_proj3"=>array(
+
+
+                  ),
+                  "enerco_proj4"=>array(
+
+
+                  ),
+                  "macc_summary1"=>array(
+
+
+                  )
+
+              )
+
+            )            
+            			
 					
 		),		
 	);
