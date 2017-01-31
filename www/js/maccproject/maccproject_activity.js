@@ -473,7 +473,13 @@ function generate(activity){
 
     $('.expander').simpleexpand();
 
-    $('[data-toggle="tooltip"]').tooltip();
+    //$('[data-toggle="tooltip"]').tooltip();
+
+    //$('.tt_reg').tooltip();
+
+    $('.tt_large').tooltip({
+        template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner large"></div></div>'
+    });
 
     $('#accordion').on('hidden.bs.collapse', toggleChevron);
     $('#accordion').on('shown.bs.collapse', toggleChevron);
