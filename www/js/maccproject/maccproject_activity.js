@@ -258,7 +258,7 @@ function generate(activity){
                 '      <h4 class="panel-title">' +
                 '        <a data-toggle="collapse" data-parent="#accordion" href="#1a">'+
                 '        Step 1: Net Present Value Analysis</a>'+
-                '         <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>'+
+                '         <a data-toggle="collapse" data-parent="#accordion" href="#1a"><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></a>'+
                 '      </h4>'+
                 '     </div>'+
                 '     <div id="1a" class="panel-collapse collapse">'+
@@ -274,7 +274,7 @@ function generate(activity){
                 '      <h4 class="panel-title">' +
                 '        <a data-toggle="collapse" data-parent="#accordion" href="#2a">'+
                 '        Step 2: Marginal Abatement Cost Analysis</a>'+
-                '        <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>'+
+                '        <a data-toggle="collapse" data-parent="#accordion" href="#2a"><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></a>'+
                 '      </h4>'+
                 '     </div>'+
                 '     <div id="2a" class="panel-collapse collapse">'+

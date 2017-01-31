@@ -910,8 +910,8 @@ function generate_maccsummarytable(company, state, projectid_array)
 
 function allProjectsCorrect(activity, state){
   // todo find these values dynamically
-  var enerco_activities = ['enerco_proj1', 'enerco_proj2', 'enerco_proj3', 'enerco_proj4'];
-  var tasbank_activities = ['tasbank_proj1', 'tasbank_proj2', 'tasbank_proj3', 'tasbank_proj4'];
+  var enerco_activities = ['enerco_proj1', 'enerco_proj2', 'enerco_proj3', 'enerco_proj4', 'macc_summary1'];
+  var tasbank_activities = ['tasbank_proj1', 'tasbank_proj2', 'tasbank_proj3', 'tasbank_proj4', 'macc_summary1'];
   var current_activities;
 
   if (activity.company == "enerco")
@@ -927,8 +927,10 @@ function allProjectsCorrect(activity, state){
   for (i=0; i<current_activities.length; i++)
   {
     var finalscore = state[activity.company][current_activities[i]].lastSubmitted_status.points;
+    console.log(i, finalscore);
     total_finalscore += finalscore;
   }
+  console.log("total_finalscore", total_finalscore);
   if (total_finalscore == 2000)
   {
     return true;
