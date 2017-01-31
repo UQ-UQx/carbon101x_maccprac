@@ -12,7 +12,7 @@
 
           "enerco_proj1"=>array(
             'macc_interestrate'=>array(
-                          'value'=>0.09,
+                          'value'=>0.08,
                           'points'=>0,
                           'tolerance'=>0,
                           'name'=>'Rate',
@@ -27,7 +27,7 @@
                           )
                         ),
             'macc_capitalcost'=>array(
-                                  'value'=>12000000,
+                                  'value'=>2500,
                                   'points'=>0,
                                   'tolerance'=>0.5,
                                   'name'=>'Capital Cost',
@@ -42,22 +42,22 @@
                                   )
                                 ),
             'macc_cashflow'=>array(
-                                      'value'=>1000000,
+                                      'value'=>1800,
                                       'points'=>0,
                                       'tolerance'=>0.5,
                                       'name'=>'Net Annual Revenue',
                                       "feedback"=>array(
                                           "correct"=>array(
-                                              "content"=>"The correct value for Net Annual Revenue is $1,000,000, which is calculated by: $2,500,000 (annual savings) - $1,500,000 (annual OPEX). "
+                                              "content"=>""
                                           ),
                                           "incorrect"=>array(
                                               "atAttempt"=>3,
-                                              "content"=>"The correct value for Net Annual Revenue is $1,000,000, which is calculated by: $2,500,000 (annual savings) - $1,500,000 (annual OPEX). "
+                                              "content"=>""
                                           )
                                       )
                                     ),
             'macc_npv'=>array(
-                        'value'=>-6967047.16,
+                        'value'=>4686.88,
                         'points'=>0,
                         'tolerance'=>0.5,
                         'name'=>'Net Present Value',
@@ -72,22 +72,22 @@
                         )
                       ),
             'macc_totalabatement'=>array(
-                                    'value'=>280000,
+                                    'value'=>175,
                                     'points'=>0,
                                     'tolerance'=>0.5,
                                     'name'=>'Total Abatement',
                                     "feedback"=>array(
                                         "correct"=>array(
-                                            "content"=>"The correct value for Total Abatement is 280,000, which is calculated by: 7 (project lifetime, in years) * 40,000 (annual emissions reduction, in tonnes)."
+                                            "content"=>""
                                         ),
                                         "incorrect"=>array(
                                             "atAttempt"=>3,
-                                            "content"=>"The correct value for Total Abatement is 280,000, which is calculated by: 7 (project lifetime, in years) * 40,000 (annual emissions reduction, in tonnes)."
+                                            "content"=>""
                                         )
                                     )
                                   ),
             'macc_cost'=>array(
-                          'value'=>24.88,
+                          'value'=>-26.78,
                           'points'=>0,
                           'tolerance'=>0.5,
                           'name'=>'Cost',
@@ -102,7 +102,7 @@
                           )
                         ),
             'macc_projectlifetime'=>array(
-                              'value'=>7,
+                              'value'=>5,
                               'points'=>0,
                               'tolerance'=>0,
                               'name'=>'Project Lifetime',
@@ -119,7 +119,7 @@
           ),
           "enerco_proj2"=>array(
             'macc_interestrate'=>array(
-                          'value'=>0.09,
+                          'value'=>0.08,
                           'points'=>50,
                           'tolerance'=>0,
                           'name'=>'Rate',
@@ -134,7 +134,7 @@
                           )
                         ),
             'macc_capitalcost'=>array(
-                                  'value'=>20000000,
+                                  'value'=>100000,
                                   'points'=>50,
                                   'tolerance'=>0.5,
                                   'name'=>'Capital Cost',
@@ -149,22 +149,22 @@
                                   )
                                 ),
             'macc_cashflow'=>array(
-                                    'value'=>6000000,
+                                    'value'=>9000,
                                     'points'=>100,
                                     'tolerance'=>0.5,
                                     'name'=>'Net Annual Revenue',
                                     "feedback"=>array(
                                         "correct"=>array(
-                                            "content"=>"The correct value for Net Annual Revenue is $6,000,000, which is calculated by: $7,000,000 (annual savings) - $1,000,000 (annual OPEX). "
+                                            "content"=>""
                                         ),
                                         "incorrect"=>array(
                                             "atAttempt"=>3,
-                                            "content"=>"The correct value for Net Annual Revenue is $6,000,000, which is calculated by: $7,000,000 (annual savings) - $1,000,000 (annual OPEX). "
+                                            "content"=>""
                                         )
                                     )
                                   ),
             'macc_npv'=>array(
-                          'value'=>10197717.01,
+                          'value'=>-53142.67,
                           'points'=>100,
                           'tolerance'=>0.5,
                           'name'=>'Net Present Value',
@@ -179,22 +179,22 @@
                           )
                         ),
             'macc_totalabatement'=>array(
-                                      'value'=>490000,
+                                      'value'=>280,
                                       'points'=>100,
                                       'tolerance'=>0.5,
                                       'name'=>'Total Abatement',
                                       "feedback"=>array(
                                           "correct"=>array(
-                                              "content"=>"The correct value for Total Abatement is 490,000, which is calculated by: 7 (project lifetime, in years) * 70,000 (annual emissions reduction, in tonnes)."
+                                              "content"=>""
                                           ),
                                           "incorrect"=>array(
                                               "atAttempt"=>3,
-                                              "content"=>"The correct value for Total Abatement is 490,000, which is calculated by: 7 (project lifetime, in years) * 70,000 (annual emissions reduction, in tonnes)."
+                                              "content"=>""
                                           )
                                       )
                                     ),
             'macc_cost'=>array(
-                          'value'=>-20.81,
+                          'value'=>189.80,
                           'points'=>100,
                           'tolerance'=>0.5,
                           'name'=>'Cost',
@@ -226,7 +226,129 @@
           ),
           "enerco_proj3"=>array(
             'macc_interestrate'=>array(
-                          'value'=>0.09,
+                          'value'=>0.08,
+                          'points'=>50,
+                          'tolerance'=>0,
+                          'name'=>'Rate',
+                          "feedback"=>array(
+                              "correct"=>array(
+                                  "content"=>""
+                              ),
+                              "incorrect"=>array(
+                                  "atAttempt"=>3,
+                                  "content"=>""
+                              )
+                          )
+                        ),
+            'macc_capitalcost'=>array(
+                                  'value'=>9000,
+                                  'points'=>50,
+                                  'tolerance'=>0.5,
+                                  'name'=>'Capital Cost',
+                                  "feedback"=>array(
+                                      "correct"=>array(
+                                          "content"=>""
+                                      ),
+                                      "incorrect"=>array(
+                                          "atAttempt"=>3,
+                                          "content"=>""
+                                      )
+                                  )
+                                ),
+            'macc_cashflow'=>array(
+                                      'value'=>3500,
+                                      'points'=>100,
+                                      'tolerance'=>0.5,
+                                      'name'=>'Net Annual Revenue',
+                                      "feedback"=>array(
+                                          "correct"=>array(
+                                              "content"=>""
+                                          ),
+                                          "incorrect"=>array(
+                                              "atAttempt"=>3,
+                                              "content"=>""
+                                          )
+                                      )
+                                    ),
+            'macc_avoidedannualemisions'=>array(
+                                      'value'=>144,
+                                      'points'=>100,
+                                      'tolerance'=>0.5,
+                                      'name'=>'Annual Emissions Reduction',
+                                      "feedback"=>array(
+                                          "correct"=>array(
+                                              "content"=>""
+                                          ),
+                                          "incorrect"=>array(
+                                              "atAttempt"=>3,
+                                              "content"=>""
+                                          )
+                                      )
+                                    ),
+            'macc_npv'=>array(
+                          'value'=>7180.08,
+                          'points'=>100,
+                          'tolerance'=>0.5,
+                          'name'=>'Net Present Value',
+                          "feedback"=>array(
+                              "correct"=>array(
+                                  "content"=>""
+                              ),
+                              "incorrect"=>array(
+                                  "atAttempt"=>3,
+                                  "content"=>""
+                              )
+                          )
+                        ),
+            'macc_totalabatement'=>array(
+                                      'value'=>864,
+                                      'points'=>50,
+                                      'tolerance'=>1,
+                                      'name'=>'Total Abatement',
+                                      "feedback"=>array(
+                                          "correct"=>array(
+                                              "content"=>""
+                                          ),
+                                          "incorrect"=>array(
+                                              "atAttempt"=>3,
+                                              "content"=>""
+                                          )
+                                      )
+                                    ),
+            'macc_cost'=>array(
+                          'value'=>-8.31,
+                          'points'=>100,
+                          'tolerance'=>0.5,
+                          'name'=>'Cost',
+                          "feedback"=>array(
+                              "correct"=>array(
+                                  "content"=>""
+                              ),
+                              "incorrect"=>array(
+                                  "atAttempt"=>3,
+                                  "content"=>""
+                              )
+                          )
+                        ),
+            'macc_projectlifetime'=>array(
+                              'value'=>6,
+                              'points'=>50,
+                              'tolerance'=>0,
+                              'name'=>'Project Lifetime',
+                              "feedback"=>array(
+                                  "correct"=>array(
+                                      "content"=>""
+                                  ),
+                                  "incorrect"=>array(
+                                      "atAttempt"=>3,
+                                      "content"=>""
+                                  )
+                              )
+                            )
+          ),
+          "enerco_proj4"=>array(
+            'macc_interestrate'=>array(
+                          'value'=>0.08,
                           'points'=>50,
                           'tolerance'=>0,
                           'name'=>'Rate',
@@ -244,128 +366,6 @@
                                   'value'=>1000000,
                                   'points'=>50,
                                   'tolerance'=>0.5,
-                                  'name'=>'Capital Cost',
-                                  "feedback"=>array(
-                                      "correct"=>array(
-                                          "content"=>""
-                                      ),
-                                      "incorrect"=>array(
-                                          "atAttempt"=>3,
-                                          "content"=>""
-                                      )
-                                  )
-                                ),
-            'macc_cashflow'=>array(
-                                      'value'=>1070000,
-                                      'points'=>100,
-                                      'tolerance'=>0.5,
-                                      'name'=>'Net Annual Revenue',
-                                      "feedback"=>array(
-                                          "correct"=>array(
-                                              "content"=>"The correct value for Net Annual Revenue is $1,070,000, which is calculated by: $1,080,000 (annual savings) - $10,000 (annual OPEX). "
-                                          ),
-                                          "incorrect"=>array(
-                                              "atAttempt"=>3,
-                                              "content"=>"The correct value for Net Annual Revenue is $1,070,000, which is calculated by: $1,080,000 (annual savings) - $10,000 (annual OPEX). "
-                                          )
-                                      )
-                                    ),
-            'macc_avoidedannualemisions'=>array(
-                                      'value'=>5213.7,
-                                      'points'=>100,
-                                      'tolerance'=>0.5,
-                                      'name'=>'Annual Emissions Reduction',
-                                      "feedback"=>array(
-                                          "correct"=>array(
-                                              "content"=>"The correct value for Annual Emissions Reduction is 5,213.7, which is calculated by: 9,000,000 (annual kWh savings) * 0.5793 (electricity emissions factor) ÷ 1,000 (to convert kgCO<sub>2</sub>e to tCO<sub>2</sub>e)."
-                                          ),
-                                          "incorrect"=>array(
-                                              "atAttempt"=>3,
-                                              "content"=>"The correct value for Annual Emissions Reduction is 5,213.7, which is calculated by: 9,000,000 (annual kWh savings) * 0.5793 (electricity emissions factor) ÷ 1,000 (to convert kgCO<sub>2</sub>e to tCO<sub>2</sub>e)."
-                                          )
-                                      )
-                                    ),
-            'macc_npv'=>array(
-                          'value'=>3161926.85,
-                          'points'=>100,
-                          'tolerance'=>0.5,
-                          'name'=>'Net Present Value',
-                          "feedback"=>array(
-                              "correct"=>array(
-                                  "content"=>""
-                              ),
-                              "incorrect"=>array(
-                                  "atAttempt"=>3,
-                                  "content"=>""
-                              )
-                          )
-                        ),
-            'macc_totalabatement'=>array(
-                                      'value'=>26069,
-                                      'points'=>50,
-                                      'tolerance'=>1,
-                                      'name'=>'Total Abatement',
-                                      "feedback"=>array(
-                                          "correct"=>array(
-                                              "content"=>"The correct value for Total Abatement is 26,068.5, which is calculated by: 5 (project lifetime, in years) * 5,213.7 (annual emissions reduction, in tonnes)."
-                                          ),
-                                          "incorrect"=>array(
-                                              "atAttempt"=>3,
-                                              "content"=>"The correct value for Total Abatement is 26,068.5, which is calculated by: 5 (project lifetime, in years) * 5,213.7 (annual emissions reduction, in tonnes)."
-                                          )
-                                      )
-                                    ),
-            'macc_cost'=>array(
-                          'value'=>-121.29,
-                          'points'=>100,
-                          'tolerance'=>0.5,
-                          'name'=>'Cost',
-                          "feedback"=>array(
-                              "correct"=>array(
-                                  "content"=>""
-                              ),
-                              "incorrect"=>array(
-                                  "atAttempt"=>3,
-                                  "content"=>""
-                              )
-                          )
-                        ),
-            'macc_projectlifetime'=>array(
-                              'value'=>5,
-                              'points'=>50,
-                              'tolerance'=>0,
-                              'name'=>'Project Lifetime',
-                              "feedback"=>array(
-                                  "correct"=>array(
-                                      "content"=>""
-                                  ),
-                                  "incorrect"=>array(
-                                      "atAttempt"=>3,
-                                      "content"=>""
-                                  )
-                              )
-                            )
-          ),
-          "enerco_proj4"=>array(
-            'macc_interestrate'=>array(
-                          'value'=>0.09,
-                          'points'=>50,
-                          'tolerance'=>0,
-                          'name'=>'Rate',
-                          "feedback"=>array(
-                              "correct"=>array(
-                                  "content"=>""
-                              ),
-                              "incorrect"=>array(
-                                  "atAttempt"=>3,
-                                  "content"=>""
-                              )
-                          )
-                        ),
-            'macc_capitalcost'=>array(
-                                  'value'=>3500000,
-                                  'points'=>50,
-                                  'tolerance'=>0.5,
                                   'name'=>"Capital Cost",
                                   "feedback"=>array(
                                       "correct"=>array(
@@ -378,22 +378,22 @@
                                   )
                                 ),
             'macc_cashflow'=>array(
-                                      'value'=>480000,
+                                      'value'=>140000,
                                       'points'=>150,
                                       'tolerance'=>0.5,
                                       'name'=>'Net Annual Revenue',
                                       "feedback"=>array(
                                           "correct"=>array(
-                                              "content"=>"The correct value for Net Annual Revenue is $480,000, which is calculated by: 1,800,000 (annual diesel savings, in litres) * 1.10 (diesel price, in $/L) - $10,000 (annual OPEX). "
+                                              "content"=>""
                                           ),
                                           "incorrect"=>array(
                                               "atAttempt"=>3,
-                                              "content"=>"The correct value for Net Annual Revenue is $480,000, which is calculated by: 1,800,000 (annual diesel savings, in litres) * 1.10 (diesel price, in $/L) - $10,000 (annual OPEX). "
+                                              "content"=>""
                                           )
                                       )
                                     ),
             'macc_npv'=>array(
-                          'value'=>-1346759.08,
+                          'value'=>-271108.19,
                           'points'=>100,
                           'tolerance'=>0.5,
                           'name'=>'Net Present Value',
@@ -408,37 +408,37 @@
                           )
                         ),
           'macc_avoidedannualemisions'=>array(
-                                                  'value'=>4860,
+                                                  'value'=>520,
                                                   'points'=>100,
                                                   'tolerance'=>0.5,
                                                   'name'=>'Annual Emissions Reduction',
                                                   "feedback"=>array(
                                                       "correct"=>array(
-                                                          "content"=>"The correct value for Annual Emissions Reduction is 4,860, which is calculated by: 1,800,000 (annual diesel savings, in litres) * 2.7 (diesel emissions factor) ÷ 1,000 (to convert kgCO<sub>2</sub>e to tCO<sub>2</sub>e)."
+                                                          "content"=>""
                                                       ),
                                                       "incorrect"=>array(
                                                           "atAttempt"=>3,
-                                                          "content"=>"The correct value for Annual Emissions Reduction is 4,860, which is calculated by: 1,800,000 (annual diesel savings, in litres) * 2.7 (diesel emissions factor) ÷ 1,000 (to convert kgCO<sub>2</sub>e to tCO<sub>2</sub>e)."
+                                                          "content"=>""
                                                       )
                                                   )
                                                 ),
             'macc_totalabatement'=>array(
-                                      'value'=>29160,
+                                      'value'=>3640,
                                       'points'=>50,
                                       'tolerance'=>0.5,
                                       'name'=>'Total Abatement',
                                       "feedback"=>array(
                                           "correct"=>array(
-                                              "content"=>"The correct value for Total Abatement is 29160, which is calculated by: 6 (project lifetime, in years) * 4,860 (annual emissions reduction, in tonnes)."
+                                              "content"=>""
                                           ),
                                           "incorrect"=>array(
                                               "atAttempt"=>3,
-                                              "content"=>"The correct value for Total Abatement is 29160, which is calculated by: 6 (project lifetime, in years) * 4,860 (annual emissions reduction, in tonnes)."
+                                              "content"=>""
                                           )
                                       )
                                     ),
             'macc_cost'=>array(
-                          'value'=>46.19,
+                          'value'=>74.48,
                           'points'=>100,
                           'tolerance'=>0.5,
                           'name'=>'Cost',
@@ -453,7 +453,7 @@
                           )
                         ),
             'macc_projectlifetime'=>array(
-                              'value'=>6,
+                              'value'=>7,
                               'points'=>50,
                               'tolerance'=>0,
                               'name'=>'Project Lifetime',
@@ -752,8 +752,8 @@
                             'projectname'=>"Biofuel switch",
                             'projects'=>"Lighting retrofit,HVAC upgrade,Biofuel switch,Solar PV system",
                             'projectids'=>"enerco_proj1,enerco_proj2,enerco_proj3,enerco_proj4",
-                            'enable_electricity_saving'=>true,
-                            'enable_diesal_saving'=>false,
+                            'enable_electricity_saving'=>false,
+                            'enable_diesal_saving'=>true,
                             'buttons'=>array(
                                 'submit'=>true,
                                 'save'=>true,
@@ -846,8 +846,8 @@
                             'projectname'=>"Solar PV system",
                             'projects'=>"Lighting retrofit,HVAC upgrade,Biofuel switch,Solar PV system",
                             'projectids'=>"enerco_proj1,enerco_proj2,enerco_proj3,enerco_proj4",
-                            'enable_electricity_saving'=>false,
-                            'enable_diesal_saving'=>true,
+                            'enable_electricity_saving'=>true,
+                            'enable_diesal_saving'=>false,
                             'buttons'=>array(
                                 'submit'=>true,
                                 'save'=>true,

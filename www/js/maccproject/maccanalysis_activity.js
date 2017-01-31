@@ -100,6 +100,16 @@ function generate(activity){
   26,069 	-$ 121.29
   29,160 	 $ 46.19 */
     }
+    else if(activity.company == 'swanson') 
+    {
+	    /*'Lighting retrofit', 'HVAC upgrade', 'Biofuel switch', 'Solar PV system'*/
+      correct_data = [
+            {'id':1, 'project': 'Lighting retrofit', 'cost': -26.78, 'tonnes': 175, 'selectedcolour': "#3366cc", 'unselectedcolour': "#C7D5F2"},
+            {'id':2, 'project': 'HVAC upgrade', 'cost': 189.80, 'tonnes': 280, 'selectedcolour': "#dc3912", 'unselectedcolour': "#F59A9A"},
+            {'id':3, 'project': 'Biofuel switch', 'cost': -8.31, 'tonnes': 864, 'selectedcolour': "#ff9900", 'unselectedcolour': "#FADCAF"},
+            {'id':4, 'project': 'Solar PV system', 'cost': 74.48, 'tonnes': 3640, 'selectedcolour': "#109618", 'unselectedcolour': "#8FCC92"}	   
+            ] 
+    }    
     else {
       correct_data = [
             {'id':1, 'project': 'Lighting retrofit', 'cost': -35.29, 'tonnes': 50000, 'selectedcolour': "#3366cc", 'unselectedcolour': "#C7D5F2"},

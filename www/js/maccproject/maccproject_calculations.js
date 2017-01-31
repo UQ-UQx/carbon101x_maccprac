@@ -912,11 +912,17 @@ function allProjectsCorrect(activity, state){
   // todo find these values dynamically
   var enerco_activities = ['enerco_proj1', 'enerco_proj2', 'enerco_proj3', 'enerco_proj4'];
   var tasbank_activities = ['tasbank_proj1', 'tasbank_proj2', 'tasbank_proj3', 'tasbank_proj4'];
+  var swanson_activities = ['enerco_proj1', 'enerco_proj2', 'enerco_proj3', 'enerco_proj4'];
   var current_activities;
 
   if (activity.company == "enerco")
   {
     current_activities = enerco_activities;
+  }
+  else if(activity.company == "swanson") {
+	
+	current_activities = swanson_activities;
+	  
   }
   else {
     current_activities = tasbank_activities;
@@ -926,7 +932,7 @@ function allProjectsCorrect(activity, state){
 
   for (i=0; i<current_activities.length; i++)
   {
-    var finalscore = state[activity.company][current_activities[i]].lastSubmitted_status.score;
+    var finalscore = state[activity.company][current_activities[i]].lastSubmitted_status.points;
     total_finalscore += finalscore;
   }
   if (total_finalscore == 2000)
@@ -942,10 +948,12 @@ function getMACCgraphdata(activity, state){
   // todo find these values dynamically
   var enerco_activities = ['enerco_proj1', 'enerco_proj2', 'enerco_proj3', 'enerco_proj4'];
   var tasbank_activities = ['tasbank_proj1', 'tasbank_proj2', 'tasbank_proj3', 'tasbank_proj4'];
+  var swanson_activities = ['enerco_proj1', 'enerco_proj2', 'enerco_proj3', 'enerco_proj4'];
   var current_activities;
 
   var enerco_projnames = ['Steam turbine retrofit', 'Electricity network upgrade', 'Lighting retrofit', 'Truck driver education'];
   var tasbank_projnames = ['Lighting retrofit', 'HVAC upgrade', 'Install solar PV system', 'Double-glazing'];
+  var swanson_projnames = ['Lighting retrofit', 'HVAC upgrade', 'Biofuel switch', 'Solar PV system'];
   var current_projnames;
 
   var selectedcolors = ["#3366cc", "#dc3912", "#ff9900", "#109618"];
@@ -955,6 +963,10 @@ function getMACCgraphdata(activity, state){
   {
     current_activities = enerco_activities;
     current_projnames = enerco_projnames;
+  }
+  else if (activity.company == 'swanson') {
+    current_activities = swanson_activities;
+    current_projnames = swanson_projnames;	  
   }
   else {
     current_activities = tasbank_activities;
