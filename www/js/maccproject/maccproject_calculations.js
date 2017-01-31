@@ -926,7 +926,7 @@ function allProjectsCorrect(activity, state){
 
   for (i=0; i<current_activities.length; i++)
   {
-    var finalscore = state[activity.company][current_activities[i]].lastSubmitted_status.score;
+    var finalscore = state[activity.company][current_activities[i]].lastSubmitted_status.points;
     total_finalscore += finalscore;
   }
   if (total_finalscore == 2000)

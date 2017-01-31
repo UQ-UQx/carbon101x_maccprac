@@ -124,15 +124,15 @@ function CheckedView(activity){
     }
   }
   else{
-    if (lastSubmittedStatus['score']>0 & lastSubmittedStatus['score']<activity.points){
+    if (lastSubmittedStatus['points']>0 & lastSubmittedStatus['points']<activity.points){
 
       grading_status_message += incorrectTick + " Partially Correct";
     }
-    else if (lastSubmittedStatus['score']==activity.points)
+    else if (lastSubmittedStatus['points']==activity.points)
     {
       grading_status_message += correctTick + " Correct";
     }
-    else if (lastSubmittedStatus['score']==0){
+    else if (lastSubmittedStatus['points']==0){
 
       grading_status_message += incorrectTick + " Incorrect";
     }
