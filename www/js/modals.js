@@ -5,14 +5,14 @@ module.exports = {
   open:function(type, modalButtonContainer, activity){
 
     console.log(type, modalButtonContainer, activity);
-    switch (type) { 
-      case 'formula': 
+    switch (type) {
+      case 'formula':
 
         formulaModal(modalButtonContainer, activity);
 
 
         break;
-      case 'ecfef': 
+      case 'ecfef':
 
         ecfefModal(modalButtonContainer, activity);
 
@@ -31,7 +31,7 @@ module.exports = {
       default:
     }
 
-    
+
   },
 }
 
@@ -83,7 +83,7 @@ function feedbackModal(modalButtonContainer, activity){
 
 
 
-    var source = 
+    var source =
     // '{{#.}}'+
     // '<div class="modal_formula_container" data-formula_id="{{formula_id}}">'+
     // '<img src="assets/formulas/{{formula_img}}" alt="{{formula_id}} formula image" class="formulas">'+
@@ -94,8 +94,8 @@ function feedbackModal(modalButtonContainer, activity){
 
     '<div class="modal_feedback_container">'+
         '{{#.}}'+
-        '<div class="feedback_response_container {{type}}_answer_container"><h4>{{answer}}</h4>'+
-        '{{feedback.content}}</div>'+
+        '<div class="feedback_response_container {{type}}_answer_container"><h4>{{{answer}}}</h4>'+
+        '{{{feedback.content}}}</div>'+
         '{{/.}}'+
     '</div>'
 
@@ -122,19 +122,19 @@ function moreinfoModal(modalButtonContainer, activity){
   initBase("more_info_"+modalButtonContainer.data("content"), "more_info_modal", function(){
 
 
-    var consumption = 
+    var consumption =
 
 
    ' <table>'+
 
         '{{#each more_info.consumption_data}}'+
-        
+
         '<tr>'+
-                
+
             '<td class="invoice">'+
-                
+
                 '<img src="assets/'+activity.company+'/{{img}}" style="width:200px;" alt="{{alt}}" class="sources_images {{id}}">'+
-                
+
             '</td>'+
             '<td class="description">'+
                 '{{description}}'+
@@ -344,7 +344,7 @@ function moreinfoModal(modalButtonContainer, activity){
     '<b>NOTE:</b> The emission factors included above have been adapted from the Australian National Greenhouse Accounts (2015), and supplemented with other sources where necessary. When conducting a carbon footprint, it is essential to use the most relevant and up-to-date emissions factors. (In some countries, such as Australia and the United Kingdom, these may be issued by a government authority. The GHG Protocol provides general emissions factors where country-specific ones are not available.)'
 ;
 
-    var tasbank_ef = 
+    var tasbank_ef =
 
 
     '<table class="info_table">'+
@@ -590,14 +590,14 @@ function moreinfoModal(modalButtonContainer, activity){
 
 
     var source = "";
-    switch (modalButtonContainer.data("content")) { 
-      case 'consumption_data': 
+    switch (modalButtonContainer.data("content")) {
+      case 'consumption_data':
 
       source = consumption;
-       
+
 
         break;
-      case 'emissions_factors': 
+      case 'emissions_factors':
 
         if(activity.company == 'tasbank') {
             source = tasbank_ef;
@@ -646,7 +646,7 @@ function initBase(id, clas, callback){
         closeButton = '<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Close</button>';
 
     }else if(id == "more_info_consumption_data"){
-  
+
         title = "More Information: Consumption Data";
         closeButton = '<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Close</button>';
 
@@ -660,7 +660,7 @@ function initBase(id, clas, callback){
     }
 
 
-    var source = 
+    var source =
 
     '<div class="modal fade '+clas+'" id="'+id+'" role="dialog">'+
       '<div class="modal-dialog">'+
@@ -672,7 +672,7 @@ function initBase(id, clas, callback){
           '</div>'+
           '<div class="modal-body">'+
           '<div class="modal-notes-container" hidden></div>'+
-        
+
           '<div class="modal-body-content"></div>'+
 
           '</div>'+
@@ -794,8 +794,8 @@ function generateFormulaPageContent(buttonData){
      $(".page_activity").html(result);
 
 }
-// 
-// 
+//
+//
 
             // <div class="formula_container" data-formula_id="fuel">fuel<img src="assets/formulas/fuel_formula.png" alt="" class="formulas"></div>
             // <div class="formula_container" data-formula_id="natural_gas">natural<img src="assets/formulas/fuel_formula.png" alt="" class="formulas"></div>
@@ -820,7 +820,7 @@ function generateFormulaPageContent(buttonData){
 //     console.log(selected_formula_obj);
 
 
-   
+
 
 // });
 
@@ -852,5 +852,3 @@ function generateFormulaPageContent(buttonData){
 // });
 
 **/
-
-
