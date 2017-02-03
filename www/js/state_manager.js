@@ -645,11 +645,24 @@ function activityReachedAttemptsLimit(activity){
 }
 
 
+function checkStateSelected(selected) {
+  var select_num = 0;
+  for(var i = 0; i < selected.length; i++) {
+    if(selected[i].value) {
+      select_num++;
+    }
+  }
+  
+  return select_num;
+  
+}
+
 function setButtonsState(activity){
 
 
     var completion_state = state[activity.company][activity.id]["completion_state"];
-    var selected_state = state[activity.company][activity.id]["selected"].length;
+    //var selected_state = state[activity.company][activity.id]["selected"].length;
+    var selected_state = checkStateSelected(state[activity.company][activity.id]["selected"]);
     var submitted_state = state[activity.company][activity.id]["submitted"];
     var attempted_state = state[activity.company][activity.id]["attempted"];
 
