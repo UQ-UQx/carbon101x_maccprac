@@ -979,6 +979,12 @@ function getMACCgraphdata(activity, state){
         cost = val;
       }
     }
+    if (total_abatement=""){
+      total_abatement = 0;
+    }
+    if (cost=""){
+      cost = 0;
+    }
     var tmpobj = {id: i, 'project': current_projnames[i], 'cost': parseFloat(cost), 'tonnes': parseFloat(total_abatement), 'selectedcolour': selectedcolors[i], 'unselectedcolour': unselectedcolors[i]};
     macc_data.push(tmpobj);
   }
