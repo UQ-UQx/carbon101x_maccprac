@@ -652,9 +652,9 @@ function checkStateSelected(selected) {
       select_num++;
     }
   }
-  
+
   return select_num;
-  
+
 }
 
 function setButtonsState(activity){
@@ -757,31 +757,33 @@ function setFeedbackState(activity){
 
     var attempt_num = state[activity.company][activity.id]["attempted"];
 
-        if(attempt_num < activity.attempts){
+    if (activity.type!='maccanalysis')
+    {
+      if(attempt_num < activity.attempts){
 
-            var attempt_feedback = 'You have used '+attempt_num+' of '+activity.attempts+' submissions';
-            $(".attempts_feedback").html(attempt_feedback)
+          var attempt_feedback = 'You have used '+attempt_num+' of '+activity.attempts+' submissions';
+          $(".attempts_feedback").html(attempt_feedback)
 
-        }else if(attempt_num == activity.attempts){
+      }else if(attempt_num == activity.attempts){
 
-            var attempt_feedback = 'You have used '+attempt_num+' of '+activity.attempts+' submissions';
-            $(".attempts_feedback").html(attempt_feedback)
+          var attempt_feedback = 'You have used '+attempt_num+' of '+activity.attempts+' submissions';
+          $(".attempts_feedback").html(attempt_feedback)
 
-        }
+      }
 
+  }else{
 
+      var attempt_feedback = 'You have used 0 of '+activity.attempts+' submissions';
+      $(".attempts_feedback").html(attempt_feedback)
 
-    }else{
+  }
 
-        var attempt_feedback = 'You have used 0 of '+activity.attempts+' submissions';
-        $(".attempts_feedback").html(attempt_feedback)
+  $(".attempts_feedback").wrap("<i></i>");
 
     }
 
-    $(".attempts_feedback").wrap("<i></i>");
-
-
 }
+
 function setStatusIcon(activity, status){
     //not attempted, attempted, submitted
 

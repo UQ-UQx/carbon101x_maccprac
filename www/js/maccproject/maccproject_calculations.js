@@ -950,8 +950,8 @@ function getMACCgraphdata(activity, state){
   var tasbank_projnames = ['Lighting retrofit', 'HVAC upgrade', 'Install solar PV system', 'Double-glazing'];
   var current_projnames;
 
-  var selectedcolors = ["#3366cc", "#dc3912", "#ff9900", "#109618"];
-  var unselectedcolors = ["#C7D5F2", "#F59A9A", "#FADCAF", "#8FCC92"];
+  var selectedcolors = ["#e6a62e", "#1e9884", "#ad214d", "#42a2c5"];
+  var unselectedcolors = ["#FFA600", "#00B295", "#E8005D", "#F095FF"];
 
   if (activity.company == "enerco")
   {
@@ -978,15 +978,17 @@ function getMACCgraphdata(activity, state){
       else if (source_id.indexOf("macc_cost") != -1){
         cost = val;
       }
-    }
-    if (total_abatement=""){
+    };
+    //console.log(total_abatement, cost)
+    if (total_abatement==""){
       total_abatement = 0;
     }
-    if (cost=""){
+    if (cost==""){
       cost = 0;
     }
     var tmpobj = {id: i, 'project': current_projnames[i], 'cost': parseFloat(cost), 'tonnes': parseFloat(total_abatement), 'selectedcolour': selectedcolors[i], 'unselectedcolour': unselectedcolors[i]};
     macc_data.push(tmpobj);
   }
+  //console.log(macc_data);
   return macc_data;
 }

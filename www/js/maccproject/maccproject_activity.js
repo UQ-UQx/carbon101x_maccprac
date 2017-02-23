@@ -263,7 +263,7 @@ function generate(activity){
                 '     </div>'+
                 '     <div id="1a" class="panel-collapse collapse">'+
                 '      <div class="panel-body">'+
-                '        <p><i>Net Present Value (NPV)</i> is a mathematical formula for assessing the profitability of undertaking a given project. It gives the value of a project in today\'s dollars, based on how much money the project is going to save or generate in the future (less the initial upfront cost of the project)</p>'+
+                '        <p><i>Net Present Value (NPV)</i> is a mathematical formula for assessing the profitability of undertaking a given project. It gives the value of a project in today\'s dollars, based on how much money the project is going to save or generate in the future (less the initial upfront cost of the project).</p>'+
                 '        <p><i>NPV</i> is expressed in dollars; so if the <i>NPV</i> for a particular project is found to be positive - that is, greater than zero - then the benefits of the project outweigh its cost. If, on the other hand, the <i>NPV</i> is negative then the project\'s costs are greater than its financial benefits.</p>'+
                 '        <p>There are two ways to calculate <i>NPV</i>: manually, or in Microsoft Excel using the \'<i>NPV</i>\' formula. In this practical exercise, we will use a simplified Excel method (Excel is most commonly used in the real world due to its efficiency).</p>'+
                 '      </div>'+
@@ -279,7 +279,7 @@ function generate(activity){
                 '     </div>'+
                 '     <div id="2a" class="panel-collapse collapse">'+
                 '       <div class="panel-body">'+
-                '        <p>The formula for calculating Marginal Abatement Cost involves dividing the project\'s Net Present Value (<i>NPV</i>) by the total Total Emissions Abatement, then multiplying by -1. Note: multiplying by "-1" must be undertaken for the purpose of expressing a "negative cost" which is important when graphing the MACC.</p>'+
+                '        <p>The formula for calculating Marginal Abatement Cost involves dividing the project\'s Net Present Value (<i>NPV</i>) by the Total Emissions Abatement, then multiplying by -1. Note: multiplying by "-1" must be undertaken for the purpose of expressing a "negative cost" which is important when graphing the MACC.</p>'+
                 '        <p>For example, consider a project with a NPV of -$100,000 and a total emissions abatement of 270tCO<sub>2</sub>e:</p>'+
                 '        <table border="0">'+
                 '        <tr><td>Marginal Abatement Cost</td><td> = NPV/Total Emissions Abatement x -1</td></tr>'+
@@ -316,7 +316,7 @@ function generate(activity){
                     '  <div class="form-group">'+
                     '    <label class="control-label col-sm-5" for="macc_cashflow">Net Annual Cashflow:</label>'+
                     '    <div class="col-sm-7"><input type=text" class="form-control" size="12" id="macc_cashflow" class="npv_input"><span id="macc_cashflow_status"></span>' +
-                    '    <div class="helpcontainer"><a class="expander" href="#" data-expander-target="#net_annual_cashflow_help" >Determine Net Annual Cashflow</a><div class="field_help" id="net_annual_cashflow_help"><br/>Net Annual Cashflow is calculated by the project\'s financial benefit (e.g. cost savings) minus Operational Expenditure (or “OpEx”, e.g. maintenance costs).</div></div></div>' +
+                    '    <div class="helpcontainer"><a class="expander" href="#" data-expander-target="#net_annual_cashflow_help" >Determine Net Annual Cashflow</a><div class="field_help" id="net_annual_cashflow_help"><br/>Net Annual Cashflow is calculated by the project\'s financial benefit (e.g. cost savings) minus Operational Expenditure (or “OPEX”, e.g. maintenance costs).</div></div></div>' +
                     '  </div>'+
                     '  <div class="form-group">'+
                     '    <label class="control-label col-sm-5" for="macc_projectlifetime">Project Lifetime:</label>'+

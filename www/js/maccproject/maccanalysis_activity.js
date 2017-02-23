@@ -78,7 +78,8 @@ function generate(activity){
 
     source += "<div><svg class='chart'></svg><p></p></div>";
 
-
+    source += '<div class="row"><div class="quiz_container">'+
+              "</div></div>";
 
     $(".page_activity").html(source);
 
@@ -88,10 +89,10 @@ function generate(activity){
     if (activity.company == "enerco")
     {
       correct_data = [
-            {'id':1, 'project': 'Steam turbine retrofit', 'cost': 24.88, 'tonnes': 280000, 'selectedcolour': "#3366cc", 'unselectedcolour': "#C7D5F2"},
-            {'id':2, 'project': 'Electricity network upgrade', 'cost': -20.81, 'tonnes': 490000, 'selectedcolour': "#dc3912", 'unselectedcolour': "#F59A9A"},
-            {'id':3, 'project': 'Lighting retrofit', 'cost': -121.29, 'tonnes': 26069, 'selectedcolour': "#ff9900", 'unselectedcolour': "#FADCAF"},
-            {'id':4, 'project': 'Truck driver education', 'cost': 46.19, 'tonnes': 29160, 'selectedcolour': "#109618", 'unselectedcolour': "#8FCC92"}
+            {'id':1, 'project': 'Steam turbine retrofit', 'cost': 24.88, 'tonnes': 280000, 'selectedcolour': "#e6a62e", 'unselectedcolour': "#FFA600"},
+            {'id':2, 'project': 'Electricity network upgrade', 'cost': -20.81, 'tonnes': 490000, 'selectedcolour': "#1e9884", 'unselectedcolour': "#00B295"},
+            {'id':3, 'project': 'Lighting retrofit', 'cost': -121.29, 'tonnes': 26069, 'selectedcolour': "#ad214d", 'unselectedcolour': "#E8005D"},
+            {'id':4, 'project': 'Truck driver education', 'cost': 46.19, 'tonnes': 29160, 'selectedcolour': "#42a2c5", 'unselectedcolour': "#76C3DE"}
           ]
 
   /*
@@ -102,10 +103,10 @@ function generate(activity){
     }
     else {
       correct_data = [
-            {'id':1, 'project': 'Lighting retrofit', 'cost': -35.29, 'tonnes': 50000, 'selectedcolour': "#3366cc", 'unselectedcolour': "#C7D5F2"},
-            {'id':2, 'project': 'HVAC upgrade', 'cost': -11.96, 'tonnes': 84000, 'selectedcolour': "#dc3912", 'unselectedcolour': "#F59A9A"},
-            {'id':3, 'project': 'Install solar PV system', 'cost': 52.78, 'tonnes': 12976, 'selectedcolour': "#ff9900", 'unselectedcolour': "#FADCAF"},
-            {'id':4, 'project': 'Double-glazing', 'cost': 5.81, 'tonnes': 36496, 'selectedcolour': "#109618", 'unselectedcolour': "#8FCC92"}
+            {'id':1, 'project': 'Lighting retrofit', 'cost': -35.29, 'tonnes': 50000, 'selectedcolour': "#e6a62e", 'unselectedcolour': "#FFA600"},
+            {'id':2, 'project': 'HVAC upgrade', 'cost': -11.96, 'tonnes': 84000, 'selectedcolour': "#1e9884", 'unselectedcolour': "#00B295"},
+            {'id':3, 'project': 'Install solar PV system', 'cost': 52.78, 'tonnes': 12976, 'selectedcolour': "#ad214d", 'unselectedcolour': "#E8005D"},
+            {'id':4, 'project': 'Double-glazing', 'cost': 5.81, 'tonnes': 36496, 'selectedcolour': "#42a2c5", 'unselectedcolour': "#76C3DE"}
           ]
   /*
   50,000 	-$ 35.29
