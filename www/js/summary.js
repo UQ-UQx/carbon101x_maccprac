@@ -35,7 +35,7 @@ Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
 
     Handlebars.registerHelper('pretify', function(key, val, activity_id, options) {
 
-        console.log((typeof(val) == 'object'), "key",key,"val",val, activity_id);
+        //console.log((typeof(val) == 'object'), "key",key,"val",val, activity_id);
 
         var possible = "";
         var attempt = "";
@@ -122,12 +122,10 @@ module.exports = {
   init:function(company, data, callback){
 
 
-
       // console.log(company, data, callback);
        //
 
         getAnswers(company, data, function(updatedData){
-
             generateSummary(company,data, updatedData, callback);
 
         });
@@ -156,9 +154,9 @@ function getAnswers(company, data, callback){
         }
 
 
-    })
+    },100)
 
-    // //console.log(data);
+    //console.log(data);
 
     $.each(data, function(activity_id, obj){
 
@@ -228,7 +226,6 @@ function getAnswers(company, data, callback){
 
 function generateSummary(company,data, summary_data, callback){
 
-
   //console.log("red",summary_data, data);
 
  var summaryHTML = "" ;
@@ -276,7 +273,6 @@ function generateSummary(company,data, summary_data, callback){
 
   var scoreSummaryHTML = generateScoringSummaryTable(company, data, summary_data);
 
-
   //  // //console.log("SUMMARY: ",summaryHTML);
   // Commented out for maccprac
   //  $(".summaries_container").html("<div style='text-align:center'>"+scoreSummaryHTML+"<br>Use the information below to compare your responses from your latest attempt of each activity with the correct answers.</div><br/>"+summaryHTML);
@@ -286,9 +282,6 @@ function generateSummary(company,data, summary_data, callback){
 }
 
 function generateScoringSummaryTable(company, data, summary_data){
-
-
-  console.log("generate summary table", summary_data);
 
   var summary = {};
 
@@ -300,7 +293,7 @@ function generateScoringSummaryTable(company, data, summary_data){
   $.each(data, function(ind, obj){
 
 		  $.each(summary_data, function(activity_id, activitySummaryData){
-			  console.log(ind, activitySummaryData.activity.id);
+			  //console.log(ind, activitySummaryData.activity.id);
 			  	if(ind == activitySummaryData.activity.id){
 				    lTotal += activitySummaryData.leaderboardSubmittedStatus.points;
 				    eTotal += activitySummaryData.lastSubmittedStatus.points;
@@ -346,7 +339,7 @@ function generateScoringSummaryTable(company, data, summary_data){
     _.set(summary, "edx.Total", eTotalData);
 
 
-  console.table(summary);
+  //console.table(summary);
 
 
      var scoreSummaryTable =
@@ -981,7 +974,7 @@ function generateCFCSummary(data){
 
     }
 
-   console.log("AnSWER",data,  data.answer, correcttco2e);
+   //console.log("AnSWER",data,  data.answer, correcttco2e);
 
     var userResponseChart = generatePie(data.lastSubmittedStatus.tco2e, data);
   //  var userResponseBar = generateStackedBar(data.lastSubmittedStatus.tco2e, data);
