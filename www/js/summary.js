@@ -277,7 +277,19 @@ function generateSummary(company,data, summary_data, callback){
   // Commented out for maccprac
   //  $(".summaries_container").html("<div style='text-align:center'>"+scoreSummaryHTML+"<br>Use the information below to compare your responses from your latest attempt of each activity with the correct answers.</div><br/>"+summaryHTML);
 
-  $(".summaries_container").html("<div style='text-align:center'>"+scoreSummaryHTML+"</div>");
+  var scoretable = "<div style='text-align:center'>"+scoreSummaryHTML+"</div>";
+
+  //Todo - Move this text to php file
+
+  var followon_intructions = "<br/><p style='text-align:center'><img src='assets/lights_icons.png' width='350' height='172'></p><p style='text-align:left'>Well done on completing the marginal abatement cost curve practical!</p>";
+
+  followon_intructions += "<p>Through completing this activity, you have gained valuable skills and experience in:";
+  followon_intructions += "<ul><li>calculating the net present value of a project</li>";
+  followon_intructions += "<li>calculating the marginal abatement cost</li>";
+  followon_intructions += "<li>interpreting a MACC graph; and</li>";
+  followon_intructions += "<li>ranking and prioritising emissions abatement projects based on their value-for-money.</li></ul></p>";
+
+  $(".summaries_container").html(scoretable + followon_intructions);
 
 }
 
