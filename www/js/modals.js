@@ -4,7 +4,7 @@ var interaction = require("./interaction.js");
 module.exports = {
   open:function(type, modalButtonContainer, activity){
 
-    console.log(type, modalButtonContainer, activity);
+    //console.log(type, modalButtonContainer, activity);
     switch (type) {
       case 'formula':
 
@@ -31,6 +31,11 @@ module.exports = {
       default:
     }
 
+    $(".modal-dialog").css({
+        "position":"absolute",
+        "top":$(modalButtonContainer).position().top+20,
+        "left":(($(window).width()/2)-($(".modal-dialog").width()/2))
+    });
 
   },
 }
@@ -100,7 +105,7 @@ function feedbackModal(modalButtonContainer, activity){
     '</div>'
 
     var feedback = state.getActivityStateByCompanyAndActivityId(activity.company, activity.id, "lastSubmitted_status.feedback")
-    console.log(feedback);
+    //console.log(feedback);
     var template = Handlebars.compile(source);
 
     var result = template(feedback);
@@ -117,7 +122,7 @@ function feedbackModal(modalButtonContainer, activity){
 
 function moreinfoModal(modalButtonContainer, activity){
 
-  console.log(modalButtonContainer.data());
+  //console.log(modalButtonContainer.data());
 
   initBase("more_info_"+modalButtonContainer.data("content"), "more_info_modal", function(){
 

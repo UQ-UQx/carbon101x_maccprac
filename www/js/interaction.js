@@ -117,7 +117,7 @@ function watchCompanySelect(company_selector, companies){
 
 function watchNavigation(pages){
 
-    console.log(pages);
+    //console.log(pages);
     $('.page_select').click(function(e){
 
         e.preventDefault();
@@ -130,7 +130,7 @@ function watchNavigation(pages){
 
             if(selected_page == "company_select"){
 
-                console.log("AHH");
+                //console.log("AHH");
 
                     var content = {
                         "type":"company_select",
@@ -153,7 +153,7 @@ function watchNavigation(pages){
                     "data":_.find(pages,function(page){return page.page_id == selected_page})
                 }
 
-                console.log("CONTENT",pages);
+                //console.log("CONTENT",pages);
                 app.load(content, function(){
 
 
@@ -187,7 +187,7 @@ function watchMultichoice(activity){
 
     $("input[name='"+activity.id+"_option']").change(function(event){
 
-        console.log("changing selection");
+        //console.log("changing selection");
 
         updateAndSave(activity);
 
@@ -326,7 +326,7 @@ function watchScale(activity){
 function watchCFC(activity){
 
     $(".modalButton").click(function(e){
-        console.log($(this).parent().data());
+        //console.log($(this).parent().data());
         modal.open(this.dataset.modal, $(this).parent(), activity);
 
     });
@@ -370,7 +370,7 @@ function watchCFC(activity){
 
     $("select").change(function(){
 
-        console.log($(this).val());
+        //console.log($(this).val());
 
         updateAndSave(activity);
 
@@ -670,7 +670,7 @@ function startButtonInteraction() {
 
 function saveButtonInteraction(activity, button){
 
-    console.log("interact with save button");
+    //console.log("interact with save button");
 
     state.sendToServer();
 
@@ -678,7 +678,7 @@ function saveButtonInteraction(activity, button){
 
 
 function prevButtonInteraction(activity, button) {
-    console.log('interact with prev button');
+    //console.log('interact with prev button');
     var buttonData = button.dataset;
 
     $(".page_select[data-page='"+buttonData.prev_page+"']").trigger('click');
@@ -686,7 +686,7 @@ function prevButtonInteraction(activity, button) {
 }
 
 function nextButtonInteraction(activity, button) {
-    console.log('interact with next button');
+    //console.log('interact with next button');
     var buttonData = button.dataset;
 
     $(".page_select[data-page='"+buttonData.next_page+"']").trigger('click');
@@ -698,10 +698,10 @@ function nextButtonInteraction(activity, button) {
 function resetButtonInteraction(activity, button){
     var activity_generator = require("./activities_generator.js");
 
-    console.log("interact with reset button");
+    //console.log("interact with reset button");
 
 
-    console.log(activity.type);
+    //console.log(activity.type);
     if(activity.type == "draganddrop"){
          $(".draggable").animate({
                 "left": 0,
@@ -741,7 +741,7 @@ function resetButtonInteraction(activity, button){
 
 function feedbackButtonInteraction(activity, button){
 
-    console.log("interact with feedback button");
+    //console.log("interact with feedback button");
 
     if(activity.type == "carbon_footprint_calculation"){
 
@@ -749,7 +749,8 @@ function feedbackButtonInteraction(activity, button){
 
     }else{
 
-        modal.open(button.dataset.modal, $(this).parent(), activity);
+        //modal.open(button.dataset.modal, $(this).parent(), activity);
+        modal.open(button.dataset.modal, $(button).parent(), activity);
 
     }
 

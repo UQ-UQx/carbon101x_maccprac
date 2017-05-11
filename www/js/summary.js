@@ -196,7 +196,6 @@ function getAnswers(company, data, callback){
               url: "scripts/answerkey.php",
               data: data,
               success: function(response) {
-
                   content["answer"] = response;
                   toProcess --;
                   newData[activity_id] = content;
@@ -225,8 +224,6 @@ function getAnswers(company, data, callback){
 }
 
 function generateSummary(company,data, summary_data, callback){
-
-  //console.log("red",summary_data, data);
 
  var summaryHTML = "" ;
 
@@ -279,6 +276,8 @@ function generateSummary(company,data, summary_data, callback){
 
   var scoretable = "<div style='text-align:center'>"+scoreSummaryHTML+"</div>";
 
+  var summarytable = "<div style='text-align:left'><br>Use the information below to compare your responses from your latest attempt of each activity with the correct answers.</div><br/>"+summaryHTML;
+
   //Todo - Move this text to php file
 
   var followon_intructions = "<br/><p style='text-align:center'><img src='assets/lights_icons.png' width='350' height='172'></p><p style='text-align:left'>Well done on completing the marginal abatement cost curve practical!</p>";
@@ -289,7 +288,7 @@ function generateSummary(company,data, summary_data, callback){
   followon_intructions += "<li>interpreting a MACC graph; and</li>";
   followon_intructions += "<li>ranking and prioritising emissions abatement projects based on their value-for-money.</li></ul></p>";
 
-  $(".summaries_container").html(scoretable + followon_intructions);
+  $(".summaries_container").html(scoretable + summarytable + followon_intructions);
 
 }
 
@@ -429,14 +428,231 @@ function getGeneratedSummary(data){
                 return generateCFCSummary(data);
                 break;
             case "maccproject":
-                return maccprojectActivity.generateSummary(data);
+                return generateMaccProjectSummary(data);
                 break;
             case "maccinterpretation":
-                return maccprojectInterpretation.generateSummary(data);
+                return generateMaccInterpretationSummary(data);
                 break;
             default:
                 break;
         }
+
+}
+
+function generateMaccInterpretationSummary(data){
+
+    Handlebars.registerHelper("showAnswers", function(user_selection, options) {
+        var cross = '<i class="fa fa-times" style="color:red;" aria-hidden="true"></i>';
+        var tick = '<i class="fa fa-check" style="color:green;" aria-hidden="true"></i>';
+        var incorrect = false;
+
+        var entered_values = {
+          "q1_macc":{ 'name':'Q1. Which project is the best value in terms of marginal abatement cost?', 'value':"", 'status':"incorrect"},
+          "q2_macc":{ 'name':'Q2. If a carbon price of $26/tCO2e was introduced, which projects would you implement to minimise your cost of compliance?', 'value':"", 'status':"incorrect"},
+        };
+        //console.log(entered_values);
+        $.each(data.lastSubmittedStatus.incorrect, function(ind, obj){
+              entered_values[obj.source_id].value=obj.value;
+              entered_values[obj.source_id].status = "Incorrect";
+
+        });
+
+        $.each(data.lastSubmittedStatus.correct, function(ind, obj){
+          entered_values[obj.source_id].value=obj.value;
+          entered_values[obj.source_id].status = "Correct";
+
+        });
+        //console.log(entered_values);
+
+        var remainingAttemptsText = "Correct answer will be available once you have selected the correct answer or once you have reached your attempts limit";
+
+        if((data.activity.attempts-state.getActivityAttempts(data.activity)) == 1){
+
+            remainingAttemptsText += " ( "+(data.activity.attempts-state.getActivityAttempts(data.activity))+" attempt remaining )";
+
+        }else{
+
+            remainingAttemptsText += " ( "+(data.activity.attempts-state.getActivityAttempts(data.activity))+" attempts remaining )";
+
+        }
+
+        var output = remainingAttemptsText + '<br/><table class="scoreSummaryTable">';
+        output += "<thead><th></th><th>Your Response</th>";
+        if(data.answer)
+        {
+          output += "<th>Correct Answer</th>";
+        }
+        output += "</thead>";
+        output += "<tbody>";
+        for (var key in entered_values) {
+          if (entered_values[key].status != "")
+          {
+            output += "<tr>";
+            output += "<td>" + entered_values[key].name + "</td>";
+            output += "<td>" +  entered_values[key].value;
+            if (entered_values[key].status=="Correct")
+            {
+              output += tick;
+            }
+            else {
+              output += cross;
+            }
+            output += "</td>";
+            if(data.answer)
+            {
+              output += "<td>";
+
+              if(key in data.answer)
+              {
+                output += data.answer[key].value;
+              }
+
+              output += "</td>";
+            }
+            output += "</tr>";
+          }
+
+        }
+        output += "</tbody></table><br/>";
+
+        return output;
+    });
+
+
+
+
+
+    var source = "<div class='multichoice_summary_container summary_container'>"+
+                   '<div class="summary_activity_title">{{activity.name}}</div>'+
+
+                    '<div class="row">'+
+
+                        '<div class="statusContainer col-sm-6">'+
+
+                                '<div class="col-sm-12">{{{showAnswers lastSubmitted}}}</div>'+
+
+                        '</div>'+
+
+                    '</div>'+
+                 "</div>";
+
+    var template = Handlebars.compile(source);
+
+    var html = template(data);
+
+    return html;
+
+
+}
+
+function generateMaccProjectSummary(data){
+
+    Handlebars.registerHelper("showAnswers", function(user_selection, options) {
+        var cross = '<i class="fa fa-times" style="color:red;" aria-hidden="true"></i>';
+        var tick = '<i class="fa fa-check" style="color:green;" aria-hidden="true"></i>';
+        var incorrect = false;
+
+        var entered_values = {
+          "macc_interestrate":{ 'name':'Interest Rate', 'value':"", 'status':"incorrect"},
+          "macc_cashflow":{ 'name':'Net Annual Cashflow:', 'value':"", 'status':"incorrect"},
+          "macc_projectlifetime":{ 'name':'Project Lifetime' , 'value':"", 'status':"incorrect"},
+          "macc_capitalcost":{ 'name':'Capital Cost' ,  'value':"", 'status':"incorrect"},
+          "macc_npv":{ 'name':'NPV' ,  'value':"", 'status':"incorrect"},
+          "macc_totalabatement":{ 'name':'Total Abatement' ,  'value':"", 'status':"incorrect"},
+          "macc_avoidedannualemisions":{ 'name':'Avoided Annual Emission',  'value':"", 'status':""},
+          "macc_cost":{ 'name':'Marginal Abatement Cost',  'value':"", 'status':"incorrect"}
+        };
+        //console.log(entered_values);
+        $.each(data.lastSubmittedStatus.incorrect, function(ind, obj){
+              entered_values[obj.source_id].value=obj.value;
+              entered_values[obj.source_id].status = "Incorrect";
+
+        });
+
+        $.each(data.lastSubmittedStatus.correct, function(ind, obj){
+          entered_values[obj.source_id].value=obj.value;
+          entered_values[obj.source_id].status = "Correct";
+
+        });
+        //console.log(entered_values);
+
+        var remainingAttemptsText = "Correct answer will be available once you have selected the correct answer or once you have reached your attempts limit";
+
+        if((data.activity.attempts-state.getActivityAttempts(data.activity)) == 1){
+
+            remainingAttemptsText += " ( "+(data.activity.attempts-state.getActivityAttempts(data.activity))+" attempt remaining )";
+
+        }else{
+
+            remainingAttemptsText += " ( "+(data.activity.attempts-state.getActivityAttempts(data.activity))+" attempts remaining )";
+
+        }
+
+        var output = remainingAttemptsText + '<br/><table class="scoreSummaryTable">';
+        output += "<thead><th></th><th>Your Response</th>";
+        if(data.answer)
+        {
+          output += "<th>Correct Answer</th>";
+        }
+        output += "</thead>";
+        output += "<tbody>";
+        for (var key in entered_values) {
+          if (entered_values[key].status != "")
+          {
+            output += "<tr>";
+            output += "<td>" + entered_values[key].name + "</td>";
+            output += "<td>" +  numberWithCommas(entered_values[key].value);
+            if (entered_values[key].status=="Correct")
+            {
+              output += tick;
+            }
+            else {
+              output += cross;
+            }
+            output += "</td>";
+            if(data.answer)
+            {
+              output += "<td>";
+
+              if(key in data.answer)
+              {
+                output += numberWithCommas(data.answer[key].value);
+              }
+
+              output += "</td>";
+            }
+            output += "</tr>";
+          }
+
+        }
+        output += "</tbody></table><br/>";
+
+        return output;
+    });
+
+
+
+
+
+    var source = "<div class='multichoice_summary_container summary_container'>"+
+                   '<div class="summary_activity_title">{{activity.name}}</div>'+
+
+                    '<div class="row">'+
+
+                        '<div class="statusContainer col-sm-6">'+
+
+                                '<div class="col-sm-12">{{{showAnswers lastSubmitted}}}</div>'+
+
+                        '</div>'+
+
+                    '</div>'+
+                 "</div>";
+
+    var template = Handlebars.compile(source);
+
+    var html = template(data);
+
+    return html;
 
 }
 
