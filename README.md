@@ -3,7 +3,7 @@
 # Installation
 
 ### Request Project and Answer Files
-* This repository does not include the answer files (as the Practical is used as a MOOC assessment item). If you are an instructor wishing to deploy the tool as an LTI for a system such as edX, Moodle or Blackboard, please submit a support request and you will be granted access to a private repository with the answer files. 
+* This repository does not include the answer files (as the Practical is used as a MOOC assessment item). If you are an instructor wishing to deploy the tool as an LTI for a system such as edX, Moodle or Blackboard, please submit an issue on github request and you will be granted access to a private repository with the answer files. 
 
 ### Development
 
