@@ -923,66 +923,9 @@
               );
               array_push($incorrect, $vals);
             }
-            /*
-            if (in_array($key, $npv_fields)) {
-                $npv_feedback .= "<li>". $feedback_val . "</li>";
-            }
-            else if (in_array($key, $cost_fields)) {
-                $cost_feedback .= "<li>". $feedback_val . "</li>";
-            }
-            */
-            //error_log($npv_feedback,0);
-            //error_log($cost_feedback,0);
-        }
-        // Feedback is changed back to appear below the step forms
-        /*
-        if ($npv_feedback!="")
-        {
-          $npv_feedback = "<ul>".$npv_feedback."</ul>";
+
         }
 
-        if ($cost_feedback!="")
-        {
-          $cost_feedback = "<ul>".$cost_feedback."</ul>";
-        }
-
-        if (($score == $activity["points"]) || ($attempted >=3))
-        {
-          if ($npv_feedback!="")
-          {
-            $feedback = array();
-            $feedback["type"] = "incorrect";
-            $feedback["answer"] = "Step 1: Calculate NPV";
-            $feedback["user_response"] = "";
-
-            $feedback["feedback"]['content'] = $npv_feedback;
-            array_push($completeFeedback, $feedback);
-          }
-          if ($cost_feedback!="")
-          {
-            $feedback = array();
-            $feedback["type"] = "incorrect";
-            $feedback["answer"] = "Step 2: Calculate Marginal Abatement Cost";
-            $feedback["user_response"] = "";
-
-            $feedback["feedback"]['content'] = $cost_feedback;
-            array_push($completeFeedback, $feedback);
-          }
-        }
-        */
-        /*
-        error_log('correct',0);
-        error_log(json_encode($correct),0);
-
-        error_log('incorrect',0);
-        error_log(json_encode($incorrect),0);
-
-        error_log('score',0);
-        error_log(json_encode($score),0);
-
-        error_log('feedback',0);
-        error_log(json_encode($completeFeedback),0);
-        */
         $points = $score;
 
         if ($totalPoints!=0)
@@ -1054,7 +997,8 @@
     };
     error_log($pointsToLeaderboard." > ".$pointsForEdx." > ".$totalPointsPossible);
 
-    upload_leaderboard($lti->context_id(), $lti->user_id(), "footprint", $pointsToLeaderboard);
+    // Note: for public release leaderboard is commented out
+    //upload_leaderboard($lti->context_id(), $lti->user_id(), "footprint", $pointsToLeaderboard);
     if ($totalPointsPossible!=0){
       send_grade(round(($pointsForEdx/$totalPointsPossible), 2), $lti);
     }
